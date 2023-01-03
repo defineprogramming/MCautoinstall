@@ -10,7 +10,7 @@ if (-Not $java) {
 }
 
 # Download Minecraft server files
-$serverUrl = "https://launcher.mojang.com/v1/objects/bb2b6b1aefcd70dfd1892149ac3a215f6c636b07/server.jar"
+$serverUrl = "https://piston-data.mojang.com/v1/objects/c9df48efed58511cdd0213c56b9013a7b5c9ac1f/server.jar"
 $serverPath = ".\server.jar"
 Invoke-WebRequest -Uri $serverUrl -OutFile $serverPath
 
