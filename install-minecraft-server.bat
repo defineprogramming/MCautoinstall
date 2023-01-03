@@ -10,6 +10,12 @@ if %errorlevel% NEQ 0 (
 rem Download necessary dependencies
 echo Downloading dependencies...
 curl -O https://piston-data.mojang.com/v1/objects/c9df48efed58511cdd0213c56b9013a7b5c9ac1f/server.jar
+curl -O https://download.oracle.com/java/19/latest/jdk-19_windows-x64_bin.zip
+
+rem Install Java
+echo Installing Java...
+mkdir java
+7z x jdk-19_windows-x64_bin.zip -ojava
 
 rem Install Minecraft server
 echo Installing Minecraft server...
@@ -23,5 +29,3 @@ echo eula=true > eula.txt
 rem Run Minecraft server
 echo Starting Minecraft server...
 java -Xmx1024M -Xms1024M -jar server.jar nogui
-
-rem You may edit the values for Xmx and Xms above to change how much RAM is used for the server. (M=MB, G=GB)
