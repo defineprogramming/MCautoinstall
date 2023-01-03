@@ -1,15 +1,22 @@
-# Minecraft Server Installer
+# Minecraft Server Auto-Installer
 
-This repository contains a set of scripts for installing and running a Minecraft server on a Windows PC.
+This repository contains a script that automatically installs and runs a Minecraft server on a Windows PC.
 
-## Instructions
+## How to Use
 
-1. Download the repository as a zip file and extract it to a location on your computer.
-2. Double-click on `install-server.bat` to install the Minecraft server software.
-3. Edit the `server.properties` file to configure the server as desired.
-4. Double-click on `start-server.bat` to start the server.
-5. To stop the server, double-click on `stop-server.bat`.
+1. Download and install [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1).
+2. Clone or download this repository to your computer.
+3. Open a PowerShell window and navigate to the repository directory.
+4. Run the following command to install the Minecraft server:
 
-## License
+```
+.\install.ps1
+```
 
-This project is licensed under the [MIT License](LICENSE).
+5. Run the `start-server.bat` file to start the server.
+6. Run the `stop-server.bat` file to stop the server.
+
+## Configuration
+
+You can configure the Minecraft server by editing the `server.properties` file located in the `server-files` directory.
+
