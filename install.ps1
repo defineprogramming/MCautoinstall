@@ -2,7 +2,7 @@
 $java = Get-Command java
 if (-Not $java) {
     # Download and install Java if it is not installed
-    $javaUrl = "https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/12/GPL/openjdk-14.0.2_windows-x64_bin.zip"
+    $javaUrl = "https://download.oracle.com/java/19/latest/jdk-19_windows-x64_bin.zip"
     $javaZipPath = "$env:TEMP\openjdk-14.0.2_windows-x64_bin.zip"
     Invoke-WebRequest -Uri $javaUrl -OutFile $javaZipPath
     Expand-Archive -Path $javaZipPath -DestinationPath "$env:ProgramFiles\Java"
