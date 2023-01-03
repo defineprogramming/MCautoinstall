@@ -6,6 +6,8 @@ This repository contains a script that automatically installs and runs a Minecra
 
 1. Download and install [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1).
 2. Clone or download this repository to your computer.
+3. Download and install the Minecraft Server software from the [Minecraft website](https://www.minecraft.net/en-us/download/server).
+4. Move the downloaded file to the server-files folder.
 3. Open a PowerShell window and navigate to the repository directory.
 4. Run the following command to install the Minecraft server:
 
