@@ -22,3 +22,12 @@ This repository contains a script that automatically installs and runs a Minecra
 
 You can configure the Minecraft server by editing the `server.properties` file located in the `server-files` directory.
 
+### Configuration Tips
+
+#### Want to join the server, but you're using a cracked launcher? 
+Set `online-mode` to false!
+#### Want to change the difficulty? Set the `difficulty` property to:
+`0` for **peaceful**.
+`1` for **easy**.
+`2` for **normal**.
+`3` for **hard**.
