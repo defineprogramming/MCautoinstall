@@ -11,54 +11,73 @@ if (-Not $java) {
 
 # Download Minecraft server files
 $serverUrl = "https://launcher.mojang.com/v1/objects/bb2b6b1aefcd70dfd1892149ac3a215f6c636b07/server.jar"
-$serverPath = ".\server-files\server.jar"
+$serverPath = ".\server.jar"
 Invoke-WebRequest -Uri $serverUrl -OutFile $serverPath
 
 # Create eula.txt file
 $eula = @"
 eula=true
 "@
-Set-Content -Path ".\server-files\eula.txt" -Value $eula
+Set-Content -Path ".\eula.txt" -Value $eula
 
 # Create default server.properties file
 $serverProperties = @"
 #Minecraft server properties
-generator-settings=
-force-gamemode=false
-allow-nether=true
-enforce-whitelist=false
+enable-jmx-monitoring=false
+rcon.port=25575
+level-seed=
 gamemode=survival
-broadcast-console-to-ops=true
-enable-query=false
-player-idle-timeout=0
-difficulty=easy
-spawn-monsters=true
-op-permission-level=4
-announce-player-achievements=true
-pvp=true
-snooper-enabled=true
-level-type=DEFAULT
-hardcore=false
 enable-command-block=false
-max-players=20
+enable-query=false
+generator-settings={}
+enforce-secure-profile=true
+level-name=world
+motd=A Minecraft Server
+query.port=25565
+pvp=true
+generate-structures=true
+max-chained-neighbor-updates=1000000
+difficulty=easy
 network-compression-threshold=256
+max-tick-time=60000
+require-resource-pack=false
+use-native-transport=true
+max-players=20
+online-mode=true
+enable-status=true
+allow-flight=false
+initial-disabled-packs=
+broadcast-rcon-to-ops=true
+view-distance=10
+server-ip=
+resource-pack-prompt=
+allow-nether=true
+server-port=25565
+enable-rcon=false
+sync-chunk-writes=true
+op-permission-level=4
+prevent-proxy-connections=false
+hide-online-players=false
+resource-pack=
+entity-broadcast-range-percentage=100
+simulation-distance=10
+rcon.password=
+player-idle-timeout=0
+force-gamemode=false
+rate-limit=0
+hardcore=false
+white-list=false
+broadcast-console-to-ops=true
+spawn-npcs=true
+spawn-animals=true
+function-permission-level=2
+initial-enabled-packs=vanilla
+level-type=minecraft\:normal
+text-filtering-config=
+spawn-monsters=true
+enforce-whitelist=false
+spawn-protection=16
 resource-pack-sha1=
 max-world-size=29999984
-server-port=25565
-server-ip=
-spawn-npcs=true
-allow-flight=false
-level-name=world
-view-distance=10
-resource-pack=
-spawn-animals=true
-white-list=false
-generate-structures=true
-online-mode=true
-max-build-height=256
-level-seed=
-prevent-proxy-connections=false
-use-native-transport=true
-motd=A Minecraft Server
 "@
-Set-Content -Path ".\server-files\server.properties" -Value $serverProperties
+Set-Content -Path ".\server.properties" -Value $serverProperties
