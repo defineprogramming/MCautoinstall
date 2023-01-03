@@ -15,7 +15,7 @@ curl -O https://download.oracle.com/java/19/latest/jdk-19_windows-x64_bin.zip
 rem Install Java
 echo Installing Java...
 mkdir java
-7z x jdk-19_windows-x64_bin.zip -ojava
+7z x .\minecraft_server\jdk-19_windows-x64_bin.zip -ojava
 
 rem Install Minecraft server
 echo Installing Minecraft server...
@@ -28,4 +28,4 @@ echo eula=true > eula.txt
 
 rem Run Minecraft server
 echo Starting Minecraft server...
-java -Xmx1024M -Xms1024M -jar server.jar nogui
+java -Xmx1024M -Xms1024M -jar .\minecraft_server\server.jar nogui
