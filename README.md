@@ -1,6 +1,6 @@
 # Minecraft Server Auto-Installer
 
-This repository contains a script that automatically installs and runs a Minecraft server on a Windows PC.
+This repository contains a script that automatically installs and runs a Minecraft server (v1.19.3) on a Windows PC.
 
 ## How to Use
 
